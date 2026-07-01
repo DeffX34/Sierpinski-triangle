@@ -125,4 +125,4 @@ for yV in range(canvas_size//2, -canvas_size//2, -1):
 
     canvas_view += "\n"
 
-print(canvas_view)    
+print(canvas_view)
