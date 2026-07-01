@@ -16,7 +16,7 @@ def get_points(x,y,r):
     a = pi/2 if n % 2 != 0 else 0
     points = []
     for i in range(n):
-        point = (round(x + r * cos(2*pi*i/n + a)) * 2, round(y + r * sin(2*pi*i/n + a)))
+        point = (round((x + r * cos(2*pi*i/n + a) )* 2) , round(y + r * sin(2*pi*i/n + a)))
         points.append(point)
     return points
 
@@ -72,7 +72,7 @@ def drawserpinskiytriangle():
     for i in range(4):
         if i == 0:
             allpoints[i] = []
-            points = get_points(0,-18, r)
+            points = get_points(0,-10, r)
             edges = brezenhemalgorythm(points)
             allpoints[i].append(points)
             for p in points:
@@ -89,7 +89,7 @@ def drawserpinskiytriangle():
 
                 area = radius/2.0
 
-                xc = allpoints[i-1][iterator][ind][0] // 2 + (area/1.2 if ind == 1 else -area/1.2 if ind == 2 else 0)
+                xc = allpoints[i-1][iterator][ind][0] / 2 + (area/1.12 if ind == 1 else -area/1.12 if ind == 2 else 0)
                 yc = allpoints[i-1][iterator][ind][1] + (-area/1.05 if ind == 0 else area/2)
             
                 points = get_points(xc, yc, area)
