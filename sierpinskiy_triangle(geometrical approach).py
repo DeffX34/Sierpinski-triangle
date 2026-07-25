@@ -1,5 +1,4 @@
 from math import *
-from time import *
 
 draw_symbol = "@"
 empty_symbol = "."
@@ -60,7 +59,6 @@ def brezenhemalgorythm(points):
 
     return edges
 
-
 def drawserpinskiytriangle():
     draw_points = []
     expt = 0
@@ -111,7 +109,6 @@ def drawserpinskiytriangle():
         for x in range(-canvas_size, canvas_size):
             if (x,y) in draw_points:
                 draw_canvas[x,y] = draw_symbol
-
 
 for y in range(canvas_size//2, -canvas_size//2, -1):
     for x in range(-canvas_size, canvas_size):
